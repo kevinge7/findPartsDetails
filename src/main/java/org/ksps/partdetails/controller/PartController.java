@@ -39,7 +39,6 @@ public class PartController {
     }
 
 
-
     // Option 2: POST with JSON body array, e.g., ["123","456"]
     @PostMapping("/findParts")
     public ResponseEntity<Map<String, Object>> findPartsByBody(@RequestBody List<String> primaryList) {

@@ -1,16 +1,12 @@
 package org.ksps.partdetails.repository;
 
-import org.ksps.partdetails.DTO.PartsDto;
-import org.ksps.partdetails.until.PartsRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @Repository
 public class PartRepository {

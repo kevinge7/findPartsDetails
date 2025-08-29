@@ -1,6 +1,7 @@
 package org.ksps.partdetails.service;
 
 import org.ksps.partdetails.repository.PartRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -8,11 +9,8 @@ import java.util.*;
 @Service
 public class PartServiceImpl{
 
-    private final PartRepository partRepository;
-
-    public PartServiceImpl(PartRepository partRepository) {
-        this.partRepository = partRepository;
-    }
+    @Autowired
+    PartRepository partRepository;
 
     public List<Map<String, Object>> findPartsByPrimary(List<String> primaryList) {
         if (primaryList == null || primaryList.isEmpty()) {
