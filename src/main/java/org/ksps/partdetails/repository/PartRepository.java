@@ -22,7 +22,7 @@ public class PartRepository {
         if (primaryList == null || primaryList.isEmpty()) {
             return Collections.emptyList();
         }
-        String sql = "SELECT * FROM ksp.parts WHERE `Primary` IN (:primaryList)";
+        String sql = "SELECT * FROM public.parts WHERE \"Primary\" IN (:primaryList)";
         MapSqlParameterSource params = new MapSqlParameterSource("primaryList", primaryList);
         return namedParameterJdbcTemplate.queryForList(sql, params);
     }
